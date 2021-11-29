@@ -1,1 +1,55 @@
+数组解构
+let [a,b,c,d] = [1,2,3,4]
+a=1 b=2 c=3 d=4
+对象解构 
+let obj = {
+a: '12',
+b: 'we',
+d: [{c: '34'}],
+f; {kk: '56'}
+}
+const {a: mm,b,d:[{c}],f:{kk} = obj  // 重命名及复杂对象解构
+mm = '12' b='we' c='34' kk='56' 
+
+
+
+对象赋值
+
+
+let obj = {name: 'liangjia', age: '18'}
+
+直接赋值
+const newObj1 = obj
+
+解构赋值
+const  newObj2 = {...obj}
+
+
+浅拷贝
+let newObj4 = {}
+for(let key in obj){
+   newObj4[key] = obj[key]
+}
+
+
+深拷贝
+let newObj6 = {}
+function deepClone (obj){
+for(let key in obj){
+if(typeof obj[key] === 'object'&& obj[key] !== null) {
+   deepClone(obj[key])
+} else {
+ newObj4[key] = obj[key]
+ }
+}
+}
+deepClone(obj)
+
+
+const newObj5 = JSON.parse(JSON.stringify(obj))
+
+
+const newObj3 = Object.assign({},obj)
+
+
 
