@@ -36,7 +36,7 @@ for(let key in obj){
 let newObj6 = {}
 function deepClone (obj){
 for(let key in obj){
-if(typeof obj[key] === 'object'&& obj[key] !== null) {
+if(typeof obj[key] === 'object') {
    deepClone(obj[key])
 } else {
  newObj4[key] = obj[key]
