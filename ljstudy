@@ -26,17 +26,17 @@ const  newObj2 = {...obj}
 
 
 浅拷贝
-let newObj4 = {}
+let newObj3 = {}
 for(let key in obj){
    newObj4[key] = obj[key]
 }
 
 
 深拷贝
-let newObj6 = {}
+let newObj4 = {}
 function deepClone (obj){
 for(let key in obj){
-if(typeof obj[key] === 'object') {
+if(typeof obj[key] === "object") {
    deepClone(obj[key])
 } else {
  newObj4[key] = obj[key]
@@ -49,7 +49,7 @@ deepClone(obj)
 const newObj5 = JSON.parse(JSON.stringify(obj))
 
 
-const newObj3 = Object.assign({},obj)
+const newObj6 = Object.assign({},obj)
 
 
 
